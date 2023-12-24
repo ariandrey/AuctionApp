@@ -5,7 +5,7 @@ typedef struct {
   int teklifveren_no;
   double teklif;
 } Teklif;
-
+/*Struct'ı typedef komutu ile yeni bir isim verdim "Teklif" */
 typedef struct {
   int teklifveren_sayisi;
   Teklif* teklifler;
@@ -62,6 +62,7 @@ void acikArttirma(Arttirma arttirma) {
 
 void arttirmayiBitir(Arttirma* arttirma) {
   free(arttirma->teklifler);
+/*Yukarıda tanımlanan malloc() komutu için free fonksiyonu tanımlandı. Başlangıc adresini parametre olarak aldı*/
 }
 
 int main() {
